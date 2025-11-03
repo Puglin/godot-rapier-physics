@@ -1,6 +1,6 @@
 [package]
 name = "godot-rapier"
-version = "0.8.13"
+version = "0.8.17"
 edition = "2024"
 license = "MIT"
 rust-version = "1.85"
@@ -40,7 +40,8 @@ double-dim3 = ["double", "dim3", "rapier3d-f64", "salva3d-f64"]
 bincode = { version = "1", optional = true }
 hashbrown = { version = "0.14" }
 
-godot = { git = "https://github.com/godot-rust/gdext", branch = "master", features=["register-docs", "safeguards-release-disengaged"] }
+#godot = { git = "https://github.com/Ughuuu/gdext", branch = "disable-layout-tests", features=["register-docs"] }
+godot = { version = "0.4.0", features=["register-docs"] }
 
 rapier2d = { path = "E:/Repos/ughuuu_forks/rapier/crates/rapier2d", optional = true }
 salva2d = { path = "E:/Repos/ughuuu_forks/salva/build/salva2d", features = ["rapier"], optional = true }
@@ -51,12 +52,6 @@ salva2d = { path = "E:/Repos/ughuuu_forks/salva/build/salva2d", features = ["rap
 rapier2d = { path = "E:/Repos/ughuuu_forks/rapier/crates/rapier2d", optional = true }
 salva2d = { path = "E:/Repos/ughuuu_forks/salva/build/salva2d", features = ["rapier"], optional = true }
 
-<<<<<<< HEAD
-=======
-rapier2d = { path = "E:/Repos/ughuuu_forks/rapier/crates/rapier2d", optional = true }
-salva2d = { path = "E:/Repos/ughuuu_forks/salva/build/salva2d", features = ["rapier"], optional = true }
-
->>>>>>> 948e057 (rebasing to latest upstream)
 # rapier2d = { git = "https://github.com/ughuuu/rapier", branch = "custom-changes-v29", optional = true }
 # rapier2d = { version = "*", optional = true }
 rapier2d-f64 = { git = "https://github.com/ughuuu/rapier", branch = "custom-changes-v29", optional = true}
@@ -69,8 +64,6 @@ salva3d-f64 = { git = "https://github.com/ughuuu/salva", branch = "custom-change
 serde = { version = "1.0", features = ["derive"], optional = true }
 serde_json = { version = "1.0", optional = true }
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -83,16 +76,10 @@ parry2d = { path = "E:/Repos/ughuuu_forks/parry/crates/parry2d" }
 rapier2d-f64 = {git = "https://github.com/ughuuu/rapier", branch = "custom-changes-v29"}
 # parry2d = {git = "https://github.com/ughuuu/parry", branch = "custom-changes-v24"}
 parry2d-f64 = {git = "https://github.com/ughuuu/parry", branch = "custom-changes-v24"}
->>>>>>> 948e057 (rebasing to latest upstream)
 
 
 
 [patch.crates-io]
-parry2d = { path = "E:/Repos/ughuuu_forks/parry/crates/parry2d" }
-
-
-
-# rapier2d = {git = "https://github.com/ughuuu/rapier", branch = "custom-changes-v29"}
 parry2d = { path = "E:/Repos/ughuuu_forks/parry/crates/parry2d" }
 
 
@@ -114,7 +101,6 @@ lto = "fat"
 codegen-units = 1
 
 [profile.dev]
-opt-level = 0
 opt-level = 0
 
 [package.metadata.docs.rs]
